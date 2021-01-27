@@ -1,5 +1,5 @@
-require 'sinatra'
-require_relative "lib/bookmark"
+require 'sinatra/base'
+require_relative "./lib/bookmark"
 
 class BookmarkManager < Sinatra::Base
 
@@ -20,8 +20,6 @@ class BookmarkManager < Sinatra::Base
     Bookmark.create(url: params[:url])
     redirect ('/bookmarks')
   end
-
-
 
   run! if app_file == $0
 end
