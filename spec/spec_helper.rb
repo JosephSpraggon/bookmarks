@@ -35,7 +35,6 @@ RSpec.configure do |config|
   end
 end
 
-ENV['RACK ENV'] = 'test'
 Capybara.app = BookmarkManager
 
 
